@@ -1,23 +1,72 @@
 aid: authmind
+
 name: AuthMind
-description: 'AuthMind is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'AuthMind provides identity observability solutions for agentic AI, focusing on protecting AI agents, NHI workloads, and preventing unauthorized access. Their platform offers runtime identity security enforcement, advanced threat detection, and compliance tools for modern AI-driven environments.'
+
 url: https://raw.githubusercontent.com/api-evangelist/authmind/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
-- Company
-apis: []
+- Identity
+- AI
+- Security
+- Observability
+- Platform
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/authmind-llms.txt
+- type: Hosts
+  url: hosts/authmind-hosts.yml
+- type: Vendors
+  url: vendors/authmind-vendors.yml
+- type: TermsOfService
+  url: https://www.authmind.com/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.authmind.com/privacy-policy
+- type: Blog
+  url: https://www.authmind.com/blog
+- type: Documentation
+  url: https://docs.authmind.com/
+- type: GitHubOrganization
+  url: https://github.com/authmind
+- type: DomainSecurity
+  url: security/authmind-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.authmind.com/
+
+apis: []
+
+x-coverage:
+  state: gated
+  reason: partner-login
+  detail: Docs at https://docs.authmind.com require login, returning a login HTML page.
+  evidence:
+    - url: https://docs.authmind.com/
+      status: 200
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
